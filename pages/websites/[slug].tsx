@@ -2,13 +2,13 @@ import WebsiteHeader from "@/components/ui/WebsiteHeader";
 import { WebsiteType } from "@/types/Website";
 
 export async function getStaticPaths() {
-  const websites = await fetch("http://localhost:3000/websites.json").then(
+  const websites = await fetch(`http://localhost:3000/websites.json`).then(
     (res) => res.json(),
   );
   const paths = websites.map((w: WebsiteType) => ({
     params: { slug: w.slug },
   }));
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
