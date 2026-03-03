@@ -1,44 +1,192 @@
-@import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  button,
+  input,
+  select,
+  textarea {
+    @apply appearance-none bg-transparent border-0 outline-none;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --text-button-font-family: "Inter", Helvetica;
+  --text-button-font-size: 14px;
+  --text-button-font-style: normal;
+  --text-button-font-weight: 700;
+  --text-button-letter-spacing: 0px;
+  --text-button-line-height: normal;
+  --text-h1-font-family: "Inter", Helvetica;
+  --text-h1-font-size: 80px;
+  --text-h1-font-style: normal;
+  --text-h1-font-weight: 600;
+  --text-h1-letter-spacing: 0px;
+  --text-h1-line-height: normal;
+  --text-h1-mobile-font-family: "Inter", Helvetica;
+  --text-h1-mobile-font-size: 48px;
+  --text-h1-mobile-font-style: normal;
+  --text-h1-mobile-font-weight: 600;
+  --text-h1-mobile-letter-spacing: 0px;
+  --text-h1-mobile-line-height: normal;
+  --text-h2-font-family: "Inter", Helvetica;
+  --text-h2-font-size: 32px;
+  --text-h2-font-style: normal;
+  --text-h2-font-weight: 500;
+  --text-h2-letter-spacing: 0px;
+  --text-h2-line-height: 32px;
+  --text-h3-font-family: "Inter", Helvetica;
+  --text-h3-font-size: 24px;
+  --text-h3-font-style: normal;
+  --text-h3-font-weight: 700;
+  --text-h3-letter-spacing: 0px;
+  --text-h3-light-font-family: "Inter", Helvetica;
+  --text-h3-light-font-size: 24px;
+  --text-h3-light-font-style: normal;
+  --text-h3-light-font-weight: 400;
+  --text-h3-light-letter-spacing: 0px;
+  --text-h3-light-line-height: normal;
+  --text-h3-line-height: normal;
+  --text-input-font-family: "Inter", Helvetica;
+  --text-input-font-size: 12px;
+  --text-input-font-style: normal;
+  --text-input-font-weight: 400;
+  --text-input-letter-spacing: 0px;
+  --text-input-line-height: normal;
+  --text-paragraph-font-family: "Inter", Helvetica;
+  --text-paragraph-font-size: 12px;
+  --text-paragraph-font-style: normal;
+  --text-paragraph-font-weight: 400;
+  --text-paragraph-letter-spacing: 0px;
+  --text-paragraph-line-height: normal;
+  --text-subtitle-font-family: "Inter", Helvetica;
+  --text-subtitle-font-size: 16px;
+  --text-subtitle-font-style: normal;
+  --text-subtitle-font-weight: 400;
+  --text-subtitle-letter-spacing: 0px;
+  --text-subtitle-line-height: normal;
+  --text-tiny-font-family: "Inter", Helvetica;
+  --text-tiny-font-size: 10px;
+  --text-tiny-font-style: normal;
+  --text-tiny-font-weight: 400;
+  --text-tiny-letter-spacing: 0px;
+  --text-tiny-line-height: normal;
+  --variable-collection-dark: rgba(34, 34, 34, 1);
+  --variable-collection-light: rgba(248, 248, 248, 1);
+  --variable-collection-medium: rgba(62, 62, 62, 1);
+  --variable-collection-medium-light: rgba(78, 78, 78, 1);
+  --variable-collection-soft: rgba(237, 237, 237, 1);
+  --variable-collection-white: rgba(255, 255, 255, 1);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+:root {
+  --animate-spin: spin 1s linear infinite;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
   }
 }

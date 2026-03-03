@@ -1,12 +1,19 @@
-import { WebsiteType } from "@/types/Website";
-import Link from "next/link";
+import styles from "./WebsiteCard.module.css";
 
-export default function Website({ title, thumbnail, slug }: WebsiteType) {
-  return (
-    <Link href={`websites/${slug}`}>
-      <div>
-        {thumbnail} {title}
-      </div>
-    </Link>
-  );
+interface WebsiteCardProps {
+    title: string;
+    imageSrc: string;
+}
+
+export default function WebsiteCard({ title, imageSrc }: WebsiteCardProps) {
+    return (
+        <div className={styles.card}>
+            <div className={styles.imageWrapper}>
+                <img src={imageSrc} alt={title} className={styles.image}/>
+            </div>
+            <div className={styles.info}>
+                <span>{title}</span>
+            </div>
+        </div>
+    );
 }
