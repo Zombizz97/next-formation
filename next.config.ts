@@ -9,7 +9,10 @@ const nextConfig: NextConfig = {
   pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
   images: {
     unoptimized: true,
-  }
+  },
+  env: {
+    PAGES_BASE_URL: process.env.PAGES_BASE_URL || 'http://localhost:3000',
+  },
 };
 
 const withMDX = createMDX()

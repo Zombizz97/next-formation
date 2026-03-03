@@ -5,7 +5,7 @@ import WebsiteHeader from "@/components/ui/WebsiteHeader";
 import { WebsiteType } from "@/types/Website";
 
 export async function getStaticProps() {
-  const websites = await fetch("http://localhost:3000/websites.json").then(
+  const websites = await fetch(`${process.env.PAGES_BASE_URL}/websites.json`).then(
     (res) => res.json(),
   );
   return { props: { websites } };
