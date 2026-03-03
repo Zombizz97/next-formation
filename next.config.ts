@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   env: {
-    PAGES_BASE_PATH: process.env.PAGES_BASE_PATH || 'http://localhost:3000',
+    PAGES_BASE_URL: process.env.PAGES_BASE_URL || 'http://localhost:3000',
   },
 };
 

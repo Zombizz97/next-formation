@@ -2,7 +2,7 @@ import WebsiteHeader from "@/components/ui/WebsiteHeader";
 import { WebsiteType } from "@/types/Website";
 
 export async function getStaticPaths() {
-  const websites = await fetch(`${process.env.PAGES_BASE_PATH}/websites.json`).then(
+  const websites = await fetch(`${process.env.PAGES_BASE_URL}/websites.json`).then(
     (res) => res.json(),
   );
   const paths = websites.map((w: WebsiteType) => ({
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const websites = await fetch(`${process.env.PAGES_BASE_PATH}/websites.json`).then(
+  const websites = await fetch(`${process.env.PAGES_BASE_URL}/websites.json`).then(
     (res) => res.json(),
   );
   const currentWebsite = websites.find((w: WebsiteType) => w.slug == slug);
