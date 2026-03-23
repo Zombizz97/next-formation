@@ -1,15 +1,13 @@
-import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PinsHydrator from "@/components/layout/PinsHydrator";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 
-const inter = Inter({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+export const metadata = {
+  title: "Next Formation",
+};
 
 export default function RootLayout({
   children,
@@ -26,6 +24,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+        <PinsHydrator />
         {children}
         <Footer />
         <PrismicPreview repositoryName={repositoryName} />

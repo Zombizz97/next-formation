@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import Logo from "../ui/Logo";
+import { usePinsStore } from "@/stores/website.store";
 
 export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
   const [tag, setTag] = useState("");
+  const pinnedCount = usePinsStore((state) => state.pinnedWebsites.length);
 
   useEffect(() => {
     setTag("");
@@ -53,7 +55,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="/pins" className="flex items-center">
-              13
+              {pinnedCount}
               <span className="material-symbols-outlined">keep</span>
             </Link>
           </li>
