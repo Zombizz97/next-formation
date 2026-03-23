@@ -1,0 +1,59 @@
+{
+  "Header": {
+    "websites": "Sites web",
+    "contact": "Contact",
+    "searchPlaceholder": "Rechercher par tags",
+    "pins": "Pins",
+    "english": "EN",
+    "french": "FR"
+  },
+  "Footer": {
+    "manageCookies": "Gérer les préférences cookies"
+  },
+  "Home": {
+    "topLine": "Voir les derniers",
+    "subtitle": "et ajoute tes propres reviews",
+    "highlightTopLine": "découvrez notre dernier",
+    "highlight": "Highlight",
+    "allSites": "Voir tous les sites"
+  },
+  "Websites": {
+    "titleTopLine": "Découvrez de nouveaux",
+    "title": "Sites web"
+  },
+  "Search": {
+    "topLine": "Votre recherche pour",
+    "noResults": "Oups, aucun résultat pour le moment ...",
+    "allSites": "Voir tous les sites"
+  },
+  "Pins": {
+    "topLine": "Vos pages sauvegardées",
+    "title": "Pins",
+    "count": "{count} site(s) épinglé(s)",
+    "clearAll": "Tout retirer",
+    "emptyTitle": "Aucune page épinglée pour le moment",
+    "emptyDescription": "Ajoute des pages depuis les cartes de sites ou depuis une page détail pour les retrouver ici.",
+    "cta": "Voir les sites web",
+    "pin": "Épingler {title}",
+    "unpin": "Retirer {title} des pages épinglées"
+  },
+  "ThankYou": {
+    "message": "Merci pour votre message"
+  },
+  "NotFound": {
+    "message": "Page introuvable"
+  },
+  "SiteMenu": {
+    "seeSites": "Voir les sites",
+    "seeSite": "Voir le site"
+  },
+  "ContactForm": {
+    "submit": "Envoyer",
+    "email": "Adresse e-mail",
+    "message": "Message"
+  },
+  "Cookies": {
+    "manage": "Gérer les préférences cookies"
+  }
+}
+

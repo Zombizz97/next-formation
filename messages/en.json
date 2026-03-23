@@ -1,0 +1,59 @@
+{
+  "Header": {
+    "websites": "Websites",
+    "contact": "Contact",
+    "searchPlaceholder": "Search by tags",
+    "pins": "Pins",
+    "english": "EN",
+    "french": "FR"
+  },
+  "Footer": {
+    "manageCookies": "Manage cookie preferences"
+  },
+  "Home": {
+    "topLine": "See the latest",
+    "subtitle": "and add your own reviews",
+    "highlightTopLine": "discover our latest",
+    "highlight": "Highlight",
+    "allSites": "See all websites"
+  },
+  "Websites": {
+    "titleTopLine": "Discover new",
+    "title": "Websites"
+  },
+  "Search": {
+    "topLine": "Your search for",
+    "noResults": "Oops, no results yet ...",
+    "allSites": "See all websites"
+  },
+  "Pins": {
+    "topLine": "Your saved pages",
+    "title": "Pins",
+    "count": "{count} pinned site(s)",
+    "clearAll": "Clear all",
+    "emptyTitle": "No pinned page yet",
+    "emptyDescription": "Add pages from website cards or from a detail page to find them here.",
+    "cta": "See websites",
+    "pin": "Pin {title}",
+    "unpin": "Remove {title} from pinned pages"
+  },
+  "ThankYou": {
+    "message": "Thanks for your message"
+  },
+  "NotFound": {
+    "message": "Page not found"
+  },
+  "SiteMenu": {
+    "seeSites": "See websites",
+    "seeSite": "See site"
+  },
+  "ContactForm": {
+    "submit": "Send",
+    "email": "Email address",
+    "message": "Message"
+  },
+  "Cookies": {
+    "manage": "Manage cookie preferences"
+  }
+}
+
